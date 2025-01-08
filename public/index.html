@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="MinuteTimer - Free online clock, countdown timer and message display tool. Features include customizable countdown for holidays, digital clock with 12/24 hour format, message board with multiple fonts and effects. Perfect for time management, event planning, and holiday countdowns.">
+    <title>minutetimer</title>
+    <meta name="google-adsense-account" content="ca-pub-1200771438844459">
+    <link rel="stylesheet" href="styles.css">
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1200771438844459"
+    crossorigin="anonymous"></script>
+    <link rel="icon" href="images/favi.ico" type="image/x-icon">
+    <link rel="shortcut icon" href="images/favi.ico" type="image/x-icon">
+</head>
+<body class="dark">
+    <header>
+        
+        <!-- 其他 header 内容 -->
+    </header>
+    <nav class="main-nav">
+        <img src="images/flux.png" alt="MinuteTimer Logo" class="nav-logo">
+        <div class="nav-buttons">
+            <button class="nav-btn active" data-page="clock">Clock</button>
+            <button class="nav-btn" data-page="countdown">Countdown</button>
+            <button class="nav-btn" data-page="message">Message</button>
+            <button class="nav-btn" data-page="about">About</button>
+        </div>
+        <div style="width: 40px"></div>
+    </nav>
+    <div id="app">
+        <div id="clock-page" class="page active">
+            <div id="clock-container" class="bt-layout-middle">
+                <table id="bt-middle-table">
+                    <tr>
+                        <td id="bt-top-line" class="big-text"></td>
+                    </tr>
+                    <tr>
+                        <td id="bt-bot-line" class="big-text"></td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+        <div id="countdown-page" class="page">
+            <div class="countdown-container bt-layout-middle">
+                <table id="countdown-table">
+                    <tr>
+                        <td id="countdown-display" class="big-text"></td>
+                    </tr>
+                    <tr>
+                        <td id="countdown-label" class="big-text"></td>
+                    </tr>
+                </table>
+            </div>
+            <div class="countdown-setup">
+                <input type="datetime-local" id="target-date">
+                <input type="text" id="countdown-title" placeholder="Countdown Title">
+                <button id="start-countdown">Start Countdown</button>
+                <select id="holiday-select">
+                    <option value="">Select Holiday</option>
+                    <option value="new-year">New Year</option>
+                    <option value="christmas">Christmas</option>
+                    <option value="halloween">Halloween</option>
+                    <option value="thanksgiving">Thanksgiving (US)</option>
+                    <option value="valentine">Valentine's Day</option>
+                    <option value="easter">Easter</option>
+                    <option value="patrick">St. Patrick's Day</option>
+                    <option value="independence">Independence Day (US)</option>
+                </select>
+            </div>
+        </div>
+        <div id="message-page" class="page">
+            <div class="message-container bt-layout-middle">
+                <table id="message-table">
+                    <tr>
+                        <td id="message-display" class="big-text"></td>
+                    </tr>
+                </table>
+            </div>
+            <div class="message-setup">
+                <input type="text" id="message-input" placeholder="Enter your message">
+                <select id="font-select">
+                    <option value="Arial">Arial</option>
+                    <option value="Digital">Digital</option>
+                    <option value="Roboto">Roboto</option>
+                    <option value="OpenSans">Open Sans</option>
+                    <option value="Montserrat">Montserrat</option>
+                    <option value="SourceCodePro">Source Code Pro</option>
+                </select>
+                <select id="message-effect">
+                    <option value="none">No Effect</option>
+                    <option value="fade">Fade</option>
+                    <option value="slide">Slide</option>
+                    <option value="bounce">Bounce</option>
+                </select>
+                <input type="color" id="message-color" value="font-color">
+                <button id="update-message">Update</button>
+            </div>
+        </div>
+        <div id="about-page" class="page">
+            <div class="about-container">
+                <h1>About MinuteTimer</h1>
+                <section class="faq">
+                    <article class="faq-item">
+                        <h2>What is MinuteTimer?</h2>
+                        <p>MinuteTimer is a versatile online time management tool that combines a digital clock, countdown timer, and message display system. It's designed to help users track time, set reminders, and create custom displays for various purposes.</p>
+                    </article>
+
+                    <article class="faq-item">
+                        <h2>What can you do with MinuteTimer?</h2>
+                        <p>With MinuteTimer, you can:</p>
+                        <ul>
+                            <li>View accurate digital time in 12 or 24-hour format</li>
+                            <li>Create customized countdown timers for events and holidays</li>
+                            <li>Display custom messages with various fonts and animation effects</li>
+                            <li>Track major holiday countdowns automatically</li>
+                            <li>Customize the display with different themes and backgrounds</li>
+                        </ul>
+                    </article>
+
+                    <article class="faq-item">
+                        <h2>What is the Countdown feature in MinuteTimer?</h2>
+                        <p>MinuteTimer's countdown feature is a precise timer that shows the exact time remaining until a specific date and time. It's perfect for tracking important events, deadlines, holidays, or any future date you want to monitor.</p>
+                    </article>
+
+                    <article class="faq-item">
+                        <h2>How to use MinuteTimer's Countdown?</h2>
+                        <p>Using MinuteTimer's countdown is simple:</p>
+                        <ol>
+                            <li>Click the "Countdown" button in the navigation bar</li>
+                            <li>Either select a preset holiday from the dropdown menu, or</li>
+                            <li>Enter your custom date and time</li>
+                            <li>Add a title for your countdown</li>
+                            <li>Click "Start Countdown" to begin</li>
+                        </ol>
+                        <p>Your countdown settings will be automatically saved for future visits.</p>
+                    </article>
+
+                    <article class="faq-item">
+                        <h2>Is MinuteTimer free to use?</h2>
+                        <p>Yes! MinuteTimer is completely free to use. All features, including the clock, countdown timer, and message display system, are available at no cost.</p>
+                    </article>
+
+                    <article class="faq-item">
+                        <h2>Can I customize MinuteTimer's appearance?</h2>
+                        <p>Absolutely! MinuteTimer offers several customization options:</p>
+                        <ul>
+                            <li>Multiple theme options (Dark, Light, Nature, Gradient)</li>
+                            <li>Custom color selection</li>
+                            <li>Various fonts for message display</li>
+                            <li>Animation effects for messages</li>
+                            <li>12/24 hour time format selection</li>
+                        </ul>
+                    </article>
+                </section>
+            </div>
+        </div>
+        <div id="controls">
+            <div class="theme-selector">
+                <select id="theme-select">
+                    <option value="dark">Dark</option>
+                    <option value="light">Light</option>
+                    <option value="nature">Nature</option>
+                    <option value="gradient">Gradient</option>
+                    <option value="custom">Custom</option>
+                </select>
+            </div>
+            <div class="clock-options">
+                <select id="format-select">
+                    <option value="24">24-hour</option>
+                    <option value="12">12-hour</option>
+                </select>
+                <label>
+                    <input type="checkbox" id="show-seconds" checked>
+                    Show seconds
+                </label>
+            </div>
+        </div>
+    </div>
+    <script src="js/bigText.js"></script>
+    <script src="js/backgrounds.js"></script>
+    <script src="js/clock.js"></script>
+    <script src="js/countdown.js"></script>
+    <script src="js/navigation.js"></script>
+    <script src="js/message.js"></script>
+</body>
+</html> 

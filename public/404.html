@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>404 - Page Not Found | MinuteTimer</title>
+    <meta name="description" content="Page not found - MinuteTimer, your online clock and countdown timer">
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        .error-container {
+            text-align: center;
+            padding: 40px;
+            background: rgba(0, 0, 0, 0.5);
+            backdrop-filter: blur(5px);
+            border-radius: 12px;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .error-code {
+            font-size: 120px;
+            font-weight: bold;
+            margin: 0;
+            font-family: 'Digital', monospace;
+            color: #4ecdc4;
+            text-shadow: 0 0 10px rgba(78, 205, 196, 0.5);
+            animation: glitch 1s infinite;
+        }
+
+        .error-message {
+            font-size: 24px;
+            margin: 20px 0;
+            color: #ffffff;
+        }
+
+        .error-description {
+            font-size: 16px;
+            color: #cccccc;
+            margin-bottom: 30px;
+        }
+
+        .home-button {
+            display: inline-block;
+            padding: 12px 24px;
+            background: rgba(78, 205, 196, 0.2);
+            color: #4ecdc4;
+            text-decoration: none;
+            border-radius: 6px;
+            border: 1px solid #4ecdc4;
+            transition: all 0.3s ease;
+        }
+
+        .home-button:hover {
+            background: rgba(78, 205, 196, 0.3);
+            transform: translateY(-2px);
+            box-shadow: 0 4px 8px rgba(78, 205, 196, 0.2);
+        }
+
+        .countdown {
+            margin-top: 20px;
+            font-size: 18px;
+            color: #888888;
+        }
+
+        @keyframes glitch {
+            0% {
+                text-shadow: 0 0 10px rgba(78, 205, 196, 0.5);
+            }
+            25% {
+                text-shadow: -2px 0 #ff0000, 2px 0 #00ff00;
+            }
+            50% {
+                text-shadow: 0 0 10px rgba(78, 205, 196, 0.5);
+            }
+            75% {
+                text-shadow: 2px 0 #ff0000, -2px 0 #00ff00;
+            }
+            100% {
+                text-shadow: 0 0 10px rgba(78, 205, 196, 0.5);
+            }
+        }
+    </style>
+</head>
+<body class="dark">
+    <div class="error-container">
+        <h1 class="error-code">404</h1>
+        <h2 class="error-message">Oops! Time's Up!</h2>
+        <p class="error-description">
+            Looks like you've wandered into a time warp! The page you're looking for has either been moved, 
+            deleted, or hasn't been invented yet in this timeline.
+        </p>
+        <a href="/" class="home-button">Return to MinuteTimer</a>
+        <div class="countdown">
+            Redirecting to homepage in <span id="redirect-timer">10</span> seconds...
+        </div>
+    </div>
+
+    <script>
+        // 自动重定向倒计时
+        let timeLeft = 10;
+        const timerElement = document.getElementById('redirect-timer');
+        
+        const countdown = setInterval(() => {
+            timeLeft--;
+            timerElement.textContent = timeLeft;
+            
+            if (timeLeft <= 0) {
+                clearInterval(countdown);
+                window.location.href = '/';
+            }
+        }, 1000);
+
+        // 设置背景
+        document.body.style.background = 'linear-gradient(45deg, #1a1a1a, #2c3e50)';
+    </script>
+</body>
+</html> 

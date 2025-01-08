@@ -1,0 +1,8 @@
+name = "minutetimer"
+type = "webpack"
+account_id = "your-cloudflare-account-id"
+workers_dev = true
+
+[site]
+bucket = "./public"
+entry-point = "workers-site" 

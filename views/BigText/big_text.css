@@ -1,0 +1,74 @@
+/* Overall Layout */
+#bt-layout-container {
+  height: 100vh;
+  overflow: hidden !important;
+}
+
+#bt-layout-container {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+#bt-layout-container > .bt-layout-middle {
+  flex-grow: 0;
+  flex-shrink: 0;
+}
+#bt-layout-container > #bt-layout-top {
+  flex-shrink: 0;
+}
+#bt-layout-container > #bt-layout-bottom {
+  flex-shrink: 1;
+}
+#bt-layout-container > #bt-layout-top,
+#bt-layout-container > #bt-layout-bottom {
+  flex-basis: 0;
+}
+
+.bt-position-center #bt-layout-top,
+.bt-position-center #bt-layout-bottom {
+  flex-grow: 1;
+}
+.bt-position-top #bt-layout-top {
+  flex-grow: 0;
+}
+.bt-position-bottom #bt-layout-top {
+  flex-grow: 1;
+}
+.bt-position-bottom #bt-layout-bottom {
+  flex-grow: 0;
+}
+
+#bt-middle-table {
+  margin: auto;
+}
+.bt-position-left #bt-middle-table {
+  margin-left: 0;
+}
+.bt-position-right #bt-middle-table {
+  margin-right: 0;
+}
+
+table {
+  border-spacing: 0;
+}
+table td {
+  padding: 0;
+}
+#bt-middle-table {
+  white-space: nowrap;
+}
+
+#bt-middle-table {
+  text-align: center;
+}
+#bt-middle-table td {
+  min-width: 100%;
+}
+
+#bt-middle-table *:not(input):not(a) {
+  user-select: none;
+}
+#bt-middle-table,
+#bt-middle-table * {
+  cursor: pointer;
+}
